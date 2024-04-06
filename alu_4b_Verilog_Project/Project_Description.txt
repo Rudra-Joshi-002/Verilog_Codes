@@ -1,3 +1,5 @@
+*****This Is Combined Project Of Rudra Joshi, Raj Joshi & Yuvraj Singh Deora For The Subject of CMOS: VLSI Design In Sem-4 Of Their Engineering*****
+
 4-Bit ALU Verilog Project Description:
 
 The 4-bit ALU (Arithmetic Logic Unit) Verilog project is designed to perform arithmetic and logical operations on two 4-bit unsigned numbers. The ALU supports addition, subtraction, multiplication, and division operations based on control signals provided by the user. Additionally, it provides output carry information and displays the result on two 7-segment LED displays.
