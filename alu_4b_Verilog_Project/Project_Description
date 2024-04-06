@@ -1,0 +1,49 @@
+4-Bit ALU Verilog Project Description:
+
+The 4-bit ALU (Arithmetic Logic Unit) Verilog project is designed to perform arithmetic and logical operations on two 4-bit unsigned numbers. The ALU supports addition, subtraction, multiplication, and division operations based on control signals provided by the user. Additionally, it provides output carry information and displays the result on two 7-segment LED displays.
+
+Module Overview:
+
+alu_4b Module:
+
+Inputs:
+
+x, y: 4-bit input variables representing the two operands.
+z, p1, p2: Control switches for selecting the operation (addition, subtraction, multiplication, or division) and specifying the carry-in.
+
+Outputs:
+
+m: 8-bit output variable for storing the result of multiplication.
+e: 4-bit output variable for storing the result of addition, subtraction, or division.
+c: Output carry variable.
+disp1op, disp2op: Wire variables for displaying the result on two 7-segment LED displays.
+
+Internal Variables:
+
+seg_op1, seg_op2: Wires for connecting to the seven-segment display modules.
+e10s, e1s: Registers for transferring the tens and ones place digits to the 7-segment LEDs.
+dummy: Register for performing carry operations.
+s1, s2, s3: Registers for bit-wise multiplication logic and acting as sum registers.
+b1, b2, b3, b4: Registers for storing the value of sums of different s registers.
+c1, c2, c3: Registers for storing carry outputs of bit-wise summation for multiplication.
+
+seven_seg Module:
+
+Inputs:
+
+ip: 4-bit input representing the digit to be displayed.
+
+Outputs:
+
+op: 7-bit output representing the segment pattern to display.
+
+Description:
+
+Converts the input digit into the corresponding segment pattern for displaying on a 7-segment LED display.
+Functionality:
+
+The ALU module performs different operations based on the values of control signals p1 and p2.
+For addition and subtraction, it uses a bit-wise operation to calculate the result and output carry.
+For multiplication, it implements a bit-wise multiplication algorithm and stores the result in m.
+For division, it checks for division by zero and calculates the quotient and remainder using Verilog's division and modulo operations.
+The result is then displayed on two 7-segment LED displays, with tens and ones digits separated for easy visualization.
