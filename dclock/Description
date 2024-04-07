@@ -1,0 +1,3 @@
+Verilog module implements a simple digital clock that tracks time continuously in hours, minutes, and seconds.
+It increments time with every clock cycle and handles reset functionality to initialize the clock's state.
+The clock operates in a 24-hour format, resetting after reaching 23 hours 59 mins and 59 secs to start a new day.
